@@ -3,8 +3,8 @@ document.body.style.overflow = `hidden`
 
 const cnv = document.getElementById (`cnv_element`)
 
-cnv.width = innerWidth;
-cnv.height = innerHeight;
+cnv.width = cnv.parentNode.scrollWidth;
+cnv.height = cnv.width * 9 / 16;
 
 // get canvas context
 const ctx = cnv.getContext ('2d')
@@ -24,7 +24,7 @@ const options = {
     }
 }
 
-const seed = new Vector (innerWidth / 2, innerHeight)
+const seed = new Vector (cnv.width / 2, cnv.height)
 const shoot = new Vector (0, -150)
 
 // this time constructing an object with the class
