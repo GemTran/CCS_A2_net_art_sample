@@ -24,7 +24,7 @@ const options = {
     }
 }
 
-const seed = new Vector (cnv.width / 2, cnv.height)
+const seed = new Vector (innerWidth / 2, innerHeight)
 const shoot = new Vector (0, -150)
 
 // this time constructing an object with the class
