@@ -2,8 +2,8 @@ document.body.style.margin   = 0
 document.body.style.overflow = `hidden`
 
 const cnv = document.getElementById (`cnv_element`)
-cnv.width = innerWidth
-cnv.height = innerHeight
+const cnvwidth = innerWidth
+const cnvheight = innerHeight
 
 // get canvas context
 const ctx = cnv.getContext ('2d')
@@ -23,7 +23,7 @@ const options = {
     }
 }
 
-const seed = new Vector (cnv.width / 2, cnv.height)
+const seed = new Vector (cnvwidth / 2, cnvheight)
 const shoot = new Vector (0, -150)
 
 // this time constructing an object with the class
