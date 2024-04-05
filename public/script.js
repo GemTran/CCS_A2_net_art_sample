@@ -8,6 +8,8 @@ cnv.height = innerHeight
 // get canvas context
 const ctx = cnv.getContext ('2d')
 
+const TAU = Math.PI * 2
+
 // these option values give a nice tree, I think
 const options = {
     mult : {
