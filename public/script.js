@@ -20,10 +20,10 @@ const options = {
    }
 }
 
-const base = new Vector(cnv.width / 2, cnv.height);
-const shoot = new Vector (0, -100);
+const seed = new Vector(cnv.width / 2, cnv.height);
+const shoot = new Vector (0, -150);
 
-const tree = new Tree (base, shoot, 8, ctx)
+const tree = new Tree (seed, shoot, 8, ctx)
 
 // the current time to, in milliseconds
 function draw_frame (now) {
