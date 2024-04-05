@@ -2,8 +2,8 @@ document.body.style.margin   = 0
 document.body.style.overflow = `hidden`
 
 const cnv = document.getElementById (`cnv_element`)
-const cnvwidth = innerWidth
-const cnvheight = innerHeight
+const cnv.width = innerWidth
+const cnv.height = innerHeight
 
 // get canvas context
 const ctx = cnv.getContext ('2d')
@@ -23,7 +23,7 @@ const options = {
     }
 }
 
-const seed = new Vector (cnvwidth / 2, cnvheight)
+const seed = new Vector (cnv.width / 2, cnv.height)
 const shoot = new Vector (0, -150)
 
 // this time constructing an object with the class
@@ -39,7 +39,7 @@ function draw_frame (now) {
 
     // clear the canvas
     ctx.fillStyle = `white`
-    ctx.fillRect (0, 0, cnvwidth, cnvheight)
+    ctx.fillRect (0, 0, cnv.width, cnv.height)
 
     // convert time to seconds
     // and pass to .draw method of tree
