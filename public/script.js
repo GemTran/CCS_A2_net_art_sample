@@ -29,7 +29,7 @@ const tree = new Tree (base, shoot, 8, ctx)
 function draw_frame (now) {
 
    // clear the canvas
-   ctx.fillStyle = `white`
+   ctx.fillStyle = `turquoise`
    ctx.fillRect (0, 0, cnv.width, cnv.height)
 
    // convert time to seconds
