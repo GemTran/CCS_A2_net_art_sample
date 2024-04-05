@@ -3,8 +3,8 @@ document.body.style.overflow = `hidden`
 
 const cnv = document.getElementById (`cnv_element`)
 
-cnv.width = cnv.parentNode.scrollWidth;
-cnv.height = cnv.width * 9 / 16;
+cnv.width = innerWidth;
+cnv.height = innerHeight;
 
 // get canvas context
 const ctx = cnv.getContext ('2d')
