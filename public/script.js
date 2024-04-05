@@ -2,8 +2,8 @@ document.body.style.margin   = 0
 document.body.style.overflow = `hidden`
 
 const cnv = document.getElementById (`cnv_element`)
-cnv.width = innerWidth
-cnv.height = innerHeight
+cnv.width = innerWidth;
+cnv.height = innerHeight;
 
 // get canvas context
 const ctx = cnv.getContext ('2d')
