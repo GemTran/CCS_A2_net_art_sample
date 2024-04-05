@@ -7,9 +7,16 @@ cnv.height = innerHeight
 
 const ctx = cnv.getContext (`2d`)
 
+const base = new Vector(cnv.width / 2, cnv.height);
+const shoot = new Vector (0, -100);
+
+const tree = new Tree (base, shoot, 8, ctx)
+
 const draw_frame = () => {
    ctx.fillStyle = `turquoise`
-   ctx.fillRect (0, 0, innerWidth, innerHeight)
+   ctx.fillRect (0, 0, cnv.width, cnv.height)
+
+   tree.draw (now / 1000)
 
    requestAnimationFrame (draw_frame)
 }
