@@ -22,13 +22,13 @@ class Tree {
         if (generation > 0) this.add_branches ()
 
         // arbitrary width, dialed in via trial + error
-        this.sway_width = 0.03
+        this.sway_width = 0.02
 
         // random ish sway rate
         // as this.generation decreases
         // towards the top of the tree
         // the sway rate gets faster
-        this.sway_rate  = Math.random () * 2 / this.generation
+        this.sway_rate  = Math.random () * 3 / this.generation
     }
 
     // a method to add more branches

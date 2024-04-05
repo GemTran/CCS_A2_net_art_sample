@@ -74,12 +74,12 @@ const options = {
 }
 
 const seed = new Vector (cnv.width / 2, cnv.height)
-const shoot = new Vector (0, -150)
+const shoot = new Vector (0, -200)
 
 // this time constructing an object with the class
 // passing it the same arguments, and also the 
 // canvas context, then storing it in a variable
-const tree = new Tree (seed, shoot, 8, options, ctx)
+const tree = new Tree (seed, shoot, 10, options, ctx)
 
 // function to draw the frames
 // accepts the argument 'now'
@@ -88,7 +88,7 @@ const tree = new Tree (seed, shoot, 8, options, ctx)
 function draw_frame (now) {
 
     // clear the canvas
-    ctx.fillStyle = `white`
+    ctx.fillStyle = `grey`
     ctx.fillRect (0, 0, cnv.width, cnv.height)
 
     // convert time to seconds
