@@ -39,7 +39,7 @@ function draw_frame (now) {
 
     // clear the canvas
     ctx.fillStyle = `white`
-    ctx.fillRect (0, 0, cnv.width, cnv.height)
+    ctx.fillRect (0, 0, cnvwidth, cnvheight)
 
     // convert time to seconds
     // and pass to .draw method of tree
