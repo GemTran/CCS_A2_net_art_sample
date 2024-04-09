@@ -60,10 +60,8 @@ const ctx = cnv.getContext ('2d')
 
 
 
-
-
 const scaling = Math.SQRT2;
-
+let i = 0;
 function dragonCurve (x, y, length, angle, limit) {
   const endX = x + length * Math.cos (angle);
   const endY = y + length * Math.sin (angle);
@@ -74,6 +72,7 @@ function dragonCurve (x, y, length, angle, limit) {
   if (limit <= 0) {
     ctx.moveTo(x,y);
     ctx.lineTo(endX, endY);
+    
     return;
   }
   dragonCurve(
@@ -84,10 +83,15 @@ function dragonCurve (x, y, length, angle, limit) {
   
 }
 
-ctx.strokeStyle = "black";
+// ctx.strokeStyle = "black";
+ctx.strokeStyle = "green";
 ctx.beginPath();
-dragonCurve(200, 150, 400, Math.PI/2 , 14);
+dragonCurve(cnv.width/3, cnv.height/4, cnv.width*2/3, Math.PI/2 , 14);
 ctx.stroke();
+
+
+
+
 
 // const TAU = Math.PI * 2
 // class Vector {
