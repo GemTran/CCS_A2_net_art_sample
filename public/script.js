@@ -81,11 +81,12 @@ function dragonCurve (x, y, length, angle, limit) {
 
   dragonCurve(
     endX, endY, next_len, angle + 5 * Math.PI/4, next_lim);
+  
 }
 
 ctx.strokeStyle = "black";
 ctx.beginPath();
-dragonCurve(200, 150, 400, Math.PI/2, 15);
+dragonCurve(200, 150, 400, Math.PI/2 , 14);
 ctx.stroke();
 
 // const TAU = Math.PI * 2
