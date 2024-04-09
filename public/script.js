@@ -58,32 +58,34 @@ const ctx = cnv.getContext ('2d')
 //   steps
 // );
 
+
+
+
+
 const scaling = Math.SQRT2;
 
 function dragonCurve (x, y, length, angle, limit) {
+  const endX = x + length * Math.cos (angle);
+  const endY = y + length * Math.sin (angle);
+  const next_len = length / scaling;
+  const next_lim = limit - 1;
+
+  //make exit condition
   if (limit <= 0) {
     ctx.moveTo(x,y);
-    ctx.lineTo(x + length * Math.cos (angle), y + length * Math.sin (angle));
+    ctx.lineTo(endX, endY);
     return;
   }
   dragonCurve(
-    x, 
-    y, 
-    length/scaling, 
-    angle - Math.PI/4, 
-    limit -1);
+    x, y, next_len, angle - Math.PI/4, next_lim);
 
   dragonCurve(
-    x + length * Math.cos (angle), 
-    y + length * Math.sin (angle), 
-    length/scaling, 
-    angle + 5 * Math.PI/4, 
-    limit -1);
+    endX, endY, next_len, angle + 5 * Math.PI/4, next_lim);
 }
 
 ctx.strokeStyle = "black";
 ctx.beginPath();
-dragonCurve(200, 150, 400, Math.PI/2, 10);
+dragonCurve(200, 150, 400, Math.PI/2, 15);
 ctx.stroke();
 
 // const TAU = Math.PI * 2
