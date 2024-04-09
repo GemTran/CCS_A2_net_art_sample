@@ -63,16 +63,27 @@ const scaling = Math.SQRT2;
 function dragonCurve (x, y, length, angle, limit) {
   if (limit <= 0) {
     ctx.moveTo(x,y);
-    ctx.lineTo(x+length* Math.cos(angle), y + length * Math.sin(angle));
+    ctx.lineTo(x + length * Math.cos (angle), y + length * Math.sin (angle));
     return;
   }
-  dragonCurve(x, y, length/scaling, angle - Math.PI/4, limit -1);
-  dragonCurve(x+ length * Math.cos (angle), y + length * Math.sin (angle), length/scaling, angle + 5 * Math.PI/4, limit -1);
+  dragonCurve(
+    x, 
+    y, 
+    length/scaling, 
+    angle - Math.PI/4, 
+    limit -1);
+
+  dragonCurve(
+    x + length * Math.cos (angle), 
+    y + length * Math.sin (angle), 
+    length/scaling, 
+    angle + 5 * Math.PI/4, 
+    limit -1);
 }
 
 ctx.strokeStyle = "black";
 ctx.beginPath();
-dragonCurve(200, 150, 400, Math.PI/2, 1);
+dragonCurve(200, 150, 400, Math.PI/2, 10);
 ctx.stroke();
 
 // const TAU = Math.PI * 2
